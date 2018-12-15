@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selectors</title>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+</head>
+<body>
+
+    <p id="p1">P1-Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, nihil consectetur quod 
+        tempora adipisci voluptatem, laudantium ipsa molestiae quam nam cupiditate dolores dolor 
+        deserunt, a consequuntur fugiat pariatur cum tempore!</p>
+
+    <p class="paraf">Pariatur quas odit consequuntur. Expedita mollitia accusamus aspernatur quis tempora fuga? Mollitia 
+        neque aut hic autem! Quis nobis aperiam ipsam perspiciatis? Molestiae iste architecto aliquam 
+        asperiores eligendi eius, quas delectus?</p>
+
+    <p>Empty-Rerum reiciendis reprehenderit quo, dolores voluptatem ipsa nisi accusamus, repellendus, nihil ea 
+        rem neque assumenda sit doloribus autem qui consectetur. Odio veniam, cumque perferendis quibusdam 
+        magni est vitae quos officiis.</p>
+
+        <ul>
+            <li>Lorem, ipsum dolor.</li>
+            <li>Deserunt, laboriosam ullam.</li>
+            <li>Architecto, accusamus inventore!</li>
+        </ul>
+
+        <ul class="liste">
+            <li>Lorem, ipsum dolor.</li>
+            <li>Iste, optio totam!</li>
+            <li>Reprehenderit, recusandae omnis?</li>
+        </ul>
+
+    <script>
+    
+        // $("p").hide();
+        // $(".paraf").hide();
+        // $("#p1").hide();
+
+        $(".liste li").hide();
+
+        $("*").hide();
+        $("p.paraf").hide();
+        $("p:first").hide();
+        $("ul li:first").hide();    //ilk ul'un ilk li'si elde edilir.
+        $("ul li:first-child").hide();  // Tüm ul'ların ilk li'si elde edilir.
+        $("[href]").hide();
+        $("a[target='_blank']").hide();
+        $(":button").hide();
+        $("li:even").hide();
+        $("li:odd").hide();
+
+
+
+
+    </script>
+</body>
+</html>

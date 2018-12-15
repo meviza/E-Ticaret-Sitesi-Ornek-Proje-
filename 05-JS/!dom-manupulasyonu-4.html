@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=5, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM Manupulasyonu - 4</title>
+
+    <script>
+    
+        function page_load(){
+            
+            var btnMake = document.getElementById("btnMake");
+            btn.onclick = function(){
+
+                var parafs = document.getElementsByTagName("p");
+
+                for(var i=0; i<parafs.length; i++){
+                    var p = parafs[i];
+                    p.innerText = "Hello JS! (paragraf : " + i + ")";
+                }
+                    
+            };
+        }
+    
+    </script>
+
+</head>
+<body onload="page_load();">
+
+    <button id="btnMake" type="button">Change</button>
+    <hr>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae distinctio repellat odio at 
+        molestias qui voluptatibus adipisci placeat, aut, quod facilis laborum perferendis. Quae commodi 
+        deleniti cumque, amet cupiditate rerum!
+    </p>
+
+    <p>Quis fugit laboriosam facilis dolor! Itaque quis, ipsam eum eos fugit aliquam tempora vitae, cum 
+        quibusdam voluptatum aperiam, praesentium molestiae nostrum nihil expedita consequatur beatae 
+        magnam illo? Laboriosam, laborum doloribus.
+    </p>
+
+    <p>Praesentium nam molestiae quibusdam quas odio illum delectus esse voluptatibus ipsa recusandae accusamus 
+        accusantium non possimus aut, quisquam quia ullam mollitia pariatur, reprehenderit cupiditate, omnis 
+        voluptate. Esse minus dolor dolore!
+    </p>
+    
+</body>
+</html>

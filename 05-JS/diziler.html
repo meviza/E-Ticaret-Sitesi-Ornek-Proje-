@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Diziler</title>
+
+    <script>
+    
+    var isimler=[];
+
+    function diziElemanlariniGoster(){
+        for(var i=0; i<isimler.length; i++){
+            alert(isimler[i]);
+        }
+    }
+    function pushMetoduKullanimi(){
+        //Diziye eleman ekler. Sonuna ekler.
+        isimler.push("Murat");
+        isimler.push("Kadir");
+        }
+    
+    function unshiftMetoduKullanimi(){
+        // Dizinin en başına eleman ekler.
+        isimler.unshift("Başaren");
+    }
+
+    function sortMetoduKullanimi(){
+        // Dizinin alfabetik sıralanmasını sağlar.
+        isimler.sort();
+    } 
+
+    function popMetoduKullanimi(){
+        // Diziden en son elemanı çıkarır.
+        var sonEleman = isimler.pop();
+        alert ("Okunan son eleman :" + sonEleman);
+    }
+    
+    function shiftMetoduKullanimi(){
+        // Diziden ilk elemanını verir ve sıradan çıkarır.
+        var ilkEleman = isimler.shift();
+        alert ("Okunan ilk eleman :" + ilkEleman);
+    }
+    
+    function spliceMetoduKullanimi(){
+        // Dizide belirtilen sıra numarasından başlayarak
+        // belirtilen adette eleman çıkarılmasını sağlar.
+
+        isimler.splice(1,1);
+    }
+    
+    function concatMetoduKullanimi(){
+        // İki diziyi birleştirmeyi sağlar.
+        var isimler2 =["Modern", "Web", "Geliştirme"];
+        var tumIsimler = isimler.concat(isimler2);
+
+        for( var i=0; i<tumIsimler.length; i++){
+            alert(tumIsimler[i]);
+        }
+    }
+    
+    // pushMetoduKullanimi();
+    // unshiftMetoduKullanimi();
+    // sortMetoduKullanimi();
+    // // shiftMetoduKullanimi();
+    // // popMetoduKullanimi();
+    // // spliceMetoduKullanimi();
+    // concatMetoduKullanimi();
+    // // diziElemanlariniGoster();
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

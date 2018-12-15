@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Operatörler ve Koşullar</title>
+
+    <script>
+    
+    var sayi;
+    sayi = 20;
+    sayi = 21;
+
+    var adi="Murat",
+        soyAdi="Başaren", 
+        ikinciAd="Kadir";
+
+        var a=10;
+        var b=15;
+        var toplam= a+ b;
+        var fark= a - b;
+        var carpım= a * b;
+        var bolum= a / b;
+
+        var msj="Merhaba" + " JavaScript";
+        alert(msj);
+        
+        function karsilayici(kisiAdi, kisiSoyadi){
+           
+            if(kisiAdi==""){
+                alert=("Lütfen Adınızı Yazınız.");
+            }
+            else if(kisiSoyadi==""){
+                alert=("Lütfen Soyadınzı Yazınız.");
+            }
+            else{
+                
+                var mesaj = "Hoşgeldiniz" + "kisiAdi" + " " + "kisiSoyadi";
+                alert(mesaj);
+            }    
+         
+        }
+            // karsilayici(Murat, Basaren);
+            // karsilayici(Belinay, Basaren);
+
+            karsilayici("","");
+        
+    </script>
+
+</head>
+<body>
+
+    <ul>
+        <li>Lorem, ipsum.</li>
+        <li>Fuga, nemo!</li>
+        <li>Veniam, optio.</li>
+    </ul>
+    
+</body>
+</html>

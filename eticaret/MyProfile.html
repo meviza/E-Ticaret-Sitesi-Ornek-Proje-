@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>E-Ticaret Sayfası</title>
+
+    <link rel="stylesheet" href="node_modeles/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="HTML5 projeleri/07-Bootstrap/eticaret/Content/site.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+</body>
+<!-- navbar begin -->
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <a class="navbar-brand" href="HomePage.html">My Shop</a>
+    <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Menü">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link 3</a>
+            </li>
+        </ul>
+        <ul class="navbar nav navbar-right">
+            <li class="nav-item">
+                <a class="nav-link" href="Register.html">
+                    <span class="fa fa-user-plus mr-2"></span> Kayıt Ol</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Login.html">
+                    <span class="fa fa-sign-in mr-2"></span>Giriş</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="fa fa-user mr-2"></span>Profile</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" href="MyProfile.html">Profil Görüntüle</a>
+                    <a class="dropdown-item" href="Adresses.html">Adreslerim</a>
+                    <a class="dropdown-item" href="Orders.html">Siparişlerim</a>
+
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="ddlCart" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="fa fa-shopping-cart mr-2"></span>Sepetim</a>
+                <div class="dropdown-menu" aria-labelledby="ddlCart">
+                    <a class="dropdown-item" href="Product.html">Ürün 1</a>
+                    <a class="dropdown-item" href="Product.html">Ürün 2</a>
+                    <a class="dropdown-item" href="Product.html">Ürün 3</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="Cart.html">Sepete Git</a>
+
+
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="ddlMessages" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="fa fa-envelope mr-2"></span>Mesajlar</a>
+                <div class="dropdown-menu" aria-labelledby="ddlMessages">
+                    <a class="dropdown-item" href="Message.html">Mesaj 1</a>
+                    <a class="dropdown-item" href="Message.html">Mesaj 2</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="Messages.html">Mesajlar</a>
+
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="HomePage.html">
+                    <span class="fa fa-sign-out mr-2"></span>Çıkış</a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+<!-- navbar end -->
+
+<div class="container">
+
+    <!-- content begin -->
+    <div class="row mt-4">
+        <div class="col-md-12 my-4">
+            <h2>Profil Sayfası</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <img src="http://placehold.it/150x150" class="rounded-circle img-fluid img-thumbnail">
+        </div>
+        <div class="col-md-8">
+            <div class="form-group row">
+                <label class="text-danger col-md-2">İsim :</label>
+                <label class="col-md-10">Kerem</label>
+            </div>
+
+            <div class="form-group row">
+                <label class="text-danger col-md-2">Soyad :</label>
+                <label class="col-md-10">Çelik</label>
+            </div>
+
+            <div class="form-group row">
+                <label class="text-danger col-md-2">E-posta :</label>
+                <label class="col-md-10">kerem_newton@hotmail.com</label>
+            </div>
+
+            <div class="form-group row">
+                <label class="text-danger col-md-2">Biyografi :</label>
+                <label class="col-md-10">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus, esse eaque voluptas ratione ea incidunt
+                    minus, aliquid eveniet nulla aut commodi dolore a sapiente. Nobis repudiandae molestias laudantium doloribus
+                    assumenda!
+                </label>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-right">
+                <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#modalEdit">
+                    <span class="fa fa-edit mr-2"></span> Düzenle</a>
+                <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#modalDelete">
+                    <span class="fa fa-trash mr-2"></span> Sil</a>
+            </div>
+        </div>
+    </div>
+    <!-- content end -->
+
+</div>
+
+<!-- Modal Edit-->
+<div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modelTitleId">Düzenle</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <input type="text" name="name" id="name" placeholder="Name" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" name="surname" id="surname" placeholder="Surname" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <input type="text" name="editmail" id="editmail" placeholder="E-Mail Adress" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <textarea name="editbio" id="editbio" cols="30" rows="5" placeholder="Bio" class="form-control"></textarea>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    <span class="fa fa-close"></span> Kapat</button>
+                <button type="button" class="btn btn-warning">
+                    <span class="fa fa-save"></span> Kaydet</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal Delete -->
+<div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="deleteModalTitle" aria-hidden="true"
+    data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="deleteModalTitle">Sil</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <span class="fa fa-trash mr-2"> Hesabınızı silmek istediğinize emin misiniz?</span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    <span class="fa fa-close mr-2"></span>Kapat</button>
+                </button>
+                <button type="button" class="btn btn-danger">
+                    <span class="fa fa-trash "></span> Sil</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- footer begin -->
+<div class="card card-default text-center">
+    <div>
+        <div class="card-body text-muted">
+            <h5 class="card-title">My Shop Website</h5>
+            <a href="#" class="btn text-primary">
+                <span class="fa fa-twitter fa-2x"></span>
+            </a>
+            <a href="#" class="btn text-danger">
+                <span class="fa fa-instagram fa-2x"></span>
+            </a>
+            <a href="#" class="btn text-primary">
+                <span class="fa fa-facebook fa-2x"></span>
+            </a>
+        </div>
+        <a href="mailto:abc@mail.com" class="btn btn-info btn-sm">
+            <span class="fa fa-at mr-2"></span> E-Posta Gönder</a>
+    </div>
+    <div class="card-footer text-muted">
+        Designed By K.Çelik &copy; 2018
+    </div>
+</div>
+<!-- footer end -->
+
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap Popover</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+</head>
+
+<body>
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">Open modal for @fat</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Open modal for @getbootstrap</button>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Recipient:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Message:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    $('#exampleModal').on('show.bs.modal', function (event) { var button = $(event.relatedTarget) // Button that triggered the
+    modal var recipient = button.data('whatever') // Extract info from data-* attributes // If necessary, you could initiate
+    an AJAX request here (and then do the updating in a callback). // Update the modal's content. We'll use jQuery here,
+    but you could use a data binding library or other methods instead. var modal = $(this) modal.find('.modal-title').text('New
+    message to ' + recipient) modal.find('.modal-body input').val(recipient) })
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Hey Whatsup Man! What do you do => Yattı Uyudu.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-success" id="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, sequi magnam mollitia consequatur iure voluptatem!
+    </div>
+    <button class="btn btn-success" data-toggle="popover" title="Hello Sire" data-container="#box" data-content="Lorem ipsum dolor sit amet 
+    consectetur adipisicing elit. Doloremque veritatis quisquam perspiciatis tenetur nulla similique.">
+        Click Me!
+    </button>
+
+    <span class="d-inline-block" data-toggle="popover" data-trigger="hover" data-content="Disabled popover">
+        <button class="btn btn-primary" style="pointer-events: none;" type="button" disabled>Disabled button</button>
+    </span>
+
+    <!-- scrollspy -->
+    <nav id="navbar-example2" class="navbar navbar-light bg-danger">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="#fat">@fat</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#mdo">@mdo</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#one">one</a>
+                    <a class="dropdown-item" href="#two">two</a>
+                    <div role="separator" class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#three">three</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+        <h4 id="fat">@fat</h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat iure at recusandae tenetur inventore reprehenderit
+            amet nisi vel culpa iusto quibusdam, sunt molestiae accusamus, illo, impedit sit. Pariatur maiores nisi odio
+            voluptates ut ullam dignissimos consectetur. Nobis deserunt incidunt repudiandae! Animi eligendi incidunt assumenda
+            possimus atque exercitationem enim optio aliquam, neque inventore consectetur esse dicta veritatis temporibus
+            dolorum, laudantium harum? Facilis pariatur in odio est cum provident, dolorum doloremque architecto earum. Nam
+            accusamus labore autem cupiditate alias vel sunt officiis.</p>
+        <h4 id="mdo">@mdo</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic iusto iste, ab illo voluptatem eius laboriosam aliquid.
+            Cum eius autem consectetur, amet perferendis in debitis animi, eos ipsum repellat omnis corrupti veritatis iure
+            numquam quae illum, necessitatibus unde harum minus quidem quo aut. Nam incidunt iste cupiditate autem nesciunt
+            quas quis odio animi iure optio quae impedit eaque enim, excepturi aliquam voluptas ad sint nisi officiis debitis
+            iusto! Nam reprehenderit eveniet magnam at rem natus debitis sequi vero esse architecto.</p>
+        <h4 id="one">one</h4>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque atque vel dolore, quia harum veniam eveniet hic
+            accusantium iusto eaque doloribus maxime blanditiis earum aut, veritatis cum quas. Cupiditate, ea harum quam
+            saepe aut magni quia aspernatur ab nihil voluptates non! Magnam vero omnis molestiae tempore, vitae impedit ex,
+            aspernatur culpa cumque odio ad dolorem eaque corporis molestias incidunt expedita iusto in. Magni quia modi
+            voluptatem quaerat, odit eos rerum nesciunt ipsum et placeat dolorum est natus assumenda, eligendi voluptates?</p>
+        <h4 id="two">two</h4>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates adipisci dolore, omnis voluptate commodi ipsa
+            praesentium velit. Odit ratione ex nesciunt dolores ipsum, voluptas labore cupiditate eveniet odio recusandae
+            explicabo voluptatum minus fugit tenetur aperiam perferendis. Dolorem perferendis provident voluptatem fugiat,
+            nobis aut harum, id eum odit atque quae? Quia, dolor. Officia, dolorum veniam eius consequatur nesciunt at praesentium
+            tempora est adipisci quod placeat qui amet repellendus alias perspiciatis. Quibusdam facilis debitis dolor harum
+            perferendis in, ut esse sequi non?</p>
+        <h4 id="three">three</h4>
+        <p>Lorem ipsum dkolor sit, amet consectetur adipisicing elit. Odio omnis laborum voluptates non fugiat! Eos deserunt
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio omnis laborum voluptates non fugiat! Eos deserunt
+                ex excepturi modi soluta odit velit, natus non earum tenetur sunt voluptates rerum laudantium quam esse minus
+                beatae. Deserunt suscipit reiciendis, dicta ex hic beatae maiores fuga quia consectetur tenetur minima consequuntur
+                architecto iure? Asperiores animi accusantium, esse voluptas nesciunt modi impedit possimus placeat minus
+                odit consectetur. Repudiandae officiis enim dolor a consectetur alias quos, quisquam voluptates corrupti
+                mollitia commodi dignissimos architecto vel? Voluptatem?</p>
+    </div>
+
+    <script>
+        $("[data.toggle='popover']").popover();
+
+        // $("[data.toggle='popover']").popover({
+        //     container: "#box"
+        // });
+
+    </script>
+
+</body>
+
+</html>

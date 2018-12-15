@@ -1,0 +1,19 @@
+<script>
+
+    var http =require("http");
+
+    http.createServer(function(request,response){
+        response.setHeader("Acces-Control-Allow-Origin","*");
+        response.writeHead(200,{'Content-Type':'text/html'});
+
+        response.end('<li>Lorem ipsum dolor sit amet.</li>'
+       + '<li>Ab maxime quis totam velit?</li>'
+       + '<li>Nisi laudantium qui aut corrupti.</li>'
+       + '<li>Cum voluptates sit ipsum ea!</li>'
+       + '<li>Autem rem sunt facere sed.</li>');
+        
+    }).listen(8081);
+
+    console.log('Sunucu Adresi : http://127.0.1:8081/');
+
+</script>

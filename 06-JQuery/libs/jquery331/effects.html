@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Effects</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+    <style>
+    
+    /* p{
+        position: absolute;
+    } */
+
+    </style>
+
+    <script>
+
+        $(function () {
+            $("#hide").click(function () {
+                $("p").hide(1000);
+            });
+
+            $("#show").click(function () {
+                $("p").show(1000);
+
+            });
+
+            $("#toggle").click(function () {
+                $("p").toggle(1000);
+            });
+
+            $("#stop").click(function () {
+                $("p").stop();
+
+            });
+
+            //    $("#faceout").click(function () {
+            //         $("p").fadeOut(1000);
+
+            //     });
+
+            //     $("#fadein").click(function () {
+            //         $("p").fadeIn(1000);
+            //     });
+
+
+            //     $("#fadetoggle").click(function () {
+            //         $("p").fadeToggle(1000);
+
+            //     });
+
+            // $("#slideUp").click(function () {
+            //     $("p").slideUp(1000);
+
+            // });
+
+            // $("#slideDown").click(function () {
+            //     $("p").slideDown(1000);
+            // });
+
+
+            // $("#slideToggle").click(function () {
+            //     $("p").slideToggle(1000);
+
+            // }); 
+            
+            // $("#animate").click(function () {
+            //     $("p").animate({
+            //         "left":"+=200px",
+            //         // "top": "50px"
+            //     },2000,function(){
+            //         alert("Animasyon bitti.");
+            //     });
+
+            // });
+        });
+
+    </script>
+
+
+</head>
+
+<body>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button>
+    <button id="stop">Stop</button>
+
+    <!-- <button id="faceout">FadeOut</button>
+    <button id="fadein">FadeIn</button>
+    <button id="fadetoggle">FadeToggle</button> -->
+
+    <!-- <button id="slideUp">slideUp</button>
+    <button id="slideDown">slideDown</button>
+    <button id="slideToggle">slideToggle</button> -->
+
+    <!-- <button id="animate">Animate</button> -->
+
+
+    <hr>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit ipsam animi ex praesentium dolores, quidem repellendus
+        blanditiis dolorem quae corporis?
+    </p>
+
+    <p>Aliquid aperiam voluptatem consequatur sit veritatis doloribus est provident temporibus facere, tempore explicabo nisi
+        consequuntur officiis possimus praesentium nihil amet!
+    </p>
+
+    <p>Sit quasi eius cumque deserunt voluptatum ipsam ullam sed quam vitae, modi quisquam minus sunt officia odit rem eaque
+        velit?
+    </p>
+
+</body>
+
+</html>

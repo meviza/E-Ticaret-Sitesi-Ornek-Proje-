@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+
+</head>
+
+<body>
+
+    <div>
+        <p>Bir Ajax GET isteğinde bulunr.</p>
+        <button id="btnGet">Get Top 10 Posts</button>
+    </div>
+
+    <div>
+        <p>Bir HTML içeriği bir elementin içerisine yüklemeyi sağlar.</p>
+        <button id="btnLoad">Load HTML</button>
+        <button id="btnClearHtml">Clear HTML</button>
+    </div>
+
+    <div>
+        <p>Bir Ajax POST ile veri gönderim isteğinde bulunur.</p>
+        <input type="text" placeholder="title" id="txtTitle">
+        <input type="text" placeholder="text" id="txtText">
+        <button id="btnPost">Post Article</button>
+    </div>
+
+    <div>
+        <ul id="list">
+
+        </ul>
+    </div>
+
+    <script>
+
+        // var url = "http://127.0.1:8081/";
+
+        // $("#btnLoad").click(function () {
+        //     $("#list").load(function (data, status) {
+        //         if (status == "succes") {
+        //             console.log("HTML başarıyla yüklendi..");
+        //         }
+
+        //         if (status == "error") {
+        //             var li = $("<li></li>");
+        //             li.text("Hata Oluştu..");
+        //             $("#list").append(li);
+        //         }
+        //     });
+        // });
+
+
+        $("#btnClearHtml").click(function () {
+            $("#list").empty();
+        });
+
+        var root = "https://jsonplaceholder.typicode.com";
+        var ul = $("#list");
+
+        $("#btnGet").click(function () {
+            $.get(root + "/posts", function (data, status) {
+
+                if(status == "succes"){
+                    for (var i = 0; i < 10; i++) {
+                    var li = $("<li></li>");
+                    li.text(data[i].title);
+                    ul.append();
+                }
+                }
+                
+            });
+        });
+
+        $("#btnPost").click(function () {
+
+            var d= {
+                "title": $("#txtTitle").val,
+                    "body": $("#txtText").val
+
+        };
+
+        $.post(root + "/posts", d, function (data, status) {
+
+            if(status=="succes"){
+                var li = $("<li></li>");
+                    li.text(data.title + "-"+data.body);
+                    ul.append();
+            }
+                    
+            
+        });
+        });
+
+    </script>
+</body>
+
+</html>
